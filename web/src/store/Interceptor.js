@@ -11,7 +11,7 @@ const http= axios.create({
 //拦截器  -请求拦截
 http.interceptors.request.use(config=>{
     //部分接口需要token
-    let token=localStorage.getItem('token');
+    let token=localStorage.getItem('token')
     if(token){
         config.headers.token=token;
         // config.headers ={

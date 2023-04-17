@@ -6,6 +6,8 @@ import './store/Interceptor'
 import router from './router/index'
 
 const app = createApp(App)
+
+
 app.use(ElementPlus)
 // app.config.globalProperties.$http = axios
 app.use(router)
