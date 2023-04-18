@@ -6,6 +6,7 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 /**
  * @author minjunyue
  * @version: 2023/4/17 17:06
@@ -22,7 +23,8 @@ public class JwtInterceptor implements HandlerInterceptor {
         }
         if (!TokenUtils.verify(token)) {
             // 未登录跳转到登录界面
-            throw  new RuntimeException("no login!");
+            System.out.println("no token !");
+            return false;
         } else {
             return true;
         }

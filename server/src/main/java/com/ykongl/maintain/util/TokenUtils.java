@@ -17,9 +17,9 @@ import java.util.UUID;
 public class TokenUtils {
 
     /**
-     * 过期时间
+     * 过期时间(1h)
      */
-    private static final long EXPIRE_DATE = 30*60*100000;
+    private static final long EXPIRE_DATE = 60 * 60 * 1000;
 
     /**
      * 设置密钥

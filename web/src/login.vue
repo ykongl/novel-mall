@@ -14,6 +14,7 @@
               <el-form-item class="btns">
                   <el-button type="primary" @click="login()">登录</el-button>
                   <el-button type="success" @click="register()">注册</el-button>
+                  <el-button type="success" @click="logout()">登出</el-button>
               </el-form-item>
           </el-form>
       </el-card>
@@ -23,6 +24,7 @@
 
 <script>
 import {Login, Register} from './api/login'
+
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
     name: "login",
@@ -58,6 +60,9 @@ export default {
                   this.$message.success("添加成功")
               }
           })
+        },
+        logout(){
+            window.localStorage.removeItem("token")
         }
     }
 }
